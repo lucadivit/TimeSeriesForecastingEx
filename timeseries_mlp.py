@@ -81,7 +81,7 @@ testPredictPlot = np.empty_like(X)
 testPredictPlot[:, :] = np.nan
 testPredictPlot[len(trainPredict)+(look_back*2)+1:len(X)-1, :] = testPredict
 
-'''
+
 #Rescale Data and plotting
 X = scaler.inverse_transform(X)
 trainPredictPlot = scaler.inverse_transform(trainPredictPlot)
@@ -94,6 +94,7 @@ plt.show()
 #plot loss and val loss
 histories = [history]
 plot_chart(values=["loss", "val_loss"], colors=["g-", "r-"], title="Time Series", x_label="epochs", y_label="loss", legend=["train", "test"], histories=histories)
+'''
 
 '''
 #Custom prediction
